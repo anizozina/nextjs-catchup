@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { CommonsModule } from '../commons/commons.module';
-import { CatsController } from './cats.controller';
 import { CatsService } from './cats.service';
+import { CatsController } from './cats.controller';
+import { CommonsModule } from '../../commons/commons.module';
 
 @Module({
-  controllers: [CatsController],
   providers: [CatsService],
+  controllers: [CatsController],
   imports: [CommonsModule],
   exports: [CatsService],
 })
